@@ -31,7 +31,7 @@ function PaginationComponent() {
             .slice(page * 5 - 5, TOTAL_NO_OF_PRODUCT_PER_PAGE)
             .map((product) => {
               return (
-                <div className="product__wrapper" key={product.id}>
+                <div className="products__wrapper--container" key={product.id}>
                   <img src={product.thumbnail} />
                   <h5>{product.title}</h5>
                 </div>
@@ -39,7 +39,7 @@ function PaginationComponent() {
             })}
         </div>
       </div>
-      <div className="pagination">
+      <div className="products__wrapper--pagination">
         <span className={page === 1 && "disable"} onClick={() => setPagination(page - 1)}>⏮️</span>
         {[...Array(products.length / 5)].map((_, index) => (
           <span
