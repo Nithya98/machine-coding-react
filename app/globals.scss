@@ -97,8 +97,14 @@ a {
 
 .homepage{
   height: 100%;
+  font-size: 16px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: 50px;
-  min-height: 100vh;
+  align-items: center;
+}
+
+section{
+  margin-bottom: 40px;
+  display: flex;
 }
