@@ -23,7 +23,7 @@ function Form() {
     setErrors({
       firstNameError: "",
       lastNameError: "",
-    })
+    });
   };
 
   const onSubmit = (event) => {
@@ -34,14 +34,14 @@ function Form() {
     });
 
     if (formData.firstName?.trim() === "") {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
         firstNameError: "First Name is required",
       }));
     }
 
     if (formData.lastName?.trim() === "") {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
         lastNameError: "lastName is required",
       }));
